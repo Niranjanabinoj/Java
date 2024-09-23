@@ -27,5 +27,4 @@ public class Test
 		   System.out.println("the string is  palindrome");
 	   }
 	}
-
 }
