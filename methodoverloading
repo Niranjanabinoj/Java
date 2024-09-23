@@ -1,0 +1,39 @@
+package javalab;
+import java.util.Scanner;
+class Mover
+{
+	void area(double r)
+	{
+		System.out.println("Area of circle="+3.14*r*r);
+		
+	}
+	void area(int l,int b)
+	{
+		System.out.println("Area of rectangle="+l*b);
+	}
+	void area(double b,double h)
+	{
+		System.out.println("Area of triangle="+0.5*b*h);
+	}
+}
+
+public class Method {
+
+	public static void main(String[] args)
+	{
+       Scanner sc=new Scanner(System.in);
+       Mover m=new Mover();
+       System.out.println("enter radius of circle:");
+       double a=sc.nextDouble();
+       m.area(a);
+       System.out.println("enter length and breadth:");
+       int n=sc.nextInt();
+       int v=sc.nextInt();
+       m.area(n,v);
+       System.out.println("enter base and height:");
+       double x=sc.nextDouble();
+       double y=sc.nextDouble();
+       m.area(x,y);
+	}
+
+}
