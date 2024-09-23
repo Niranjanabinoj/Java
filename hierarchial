@@ -1,0 +1,104 @@
+package javalab;
+import java.util.Scanner;
+class Employee
+{
+	String name;
+	int age;
+	long number;
+	String address;
+	float salary;
+  Employee(String name1,int age1,long number1,String address1,float salary1)
+  {
+	  name = name1;
+	  age=age1;
+	  number=number1;
+	  address=address1;
+	  salary=salary1;
+  }
+  void printemployee()
+  {
+	  System.out.println("name:"+name);
+	  System.out.println("age="+age);
+	  System.out.println("number="+number);
+	  System.out.println("address="+address);
+  }
+  void printsalary()
+    
+  {
+	  System.out.println("salary="+salary);
+  }
+}
+class Officer extends  Employee
+{
+	String specialization;
+     Officer(String name1,int age1,long number1,String address1,float salary1,String specialization1)
+     {
+    	 super( name1, age1, number1, address1, salary1);
+    	 specialization=specialization1;
+     }
+     void printspecialization()
+     {
+    	 System.out.println("specialization="+specialization);
+     }
+}
+class Manager extends Employee
+{
+	String department;
+	Manager(String name1,int age1,long number1,String address1,float salary1,String department1)
+	{
+		super(name1,age1,number1,address1,salary1);
+		department=department1;
+	}
+	void printdepartment()
+	{
+		System.out.println("department="+department);
+	}
+}
+public class Hierarchial 
+{
+	public static void main(String[] args) 
+	{
+      Scanner sc=new Scanner(System.in);
+      String name;
+      int age;
+      long number;
+      String address;
+      float salary;
+      String specialization;
+      String department;
+      System.out.println("enter officer name:");
+      name=sc.next();
+      System.out.println("enter officer age:");
+      age=sc.nextInt();
+      System.out.println("enter officer number:");
+       number=sc.nextLong();
+      System.out.println("enter address:");
+       address=sc.next();
+      System.out.println("enter officer salary:");
+       salary=sc.nextFloat();
+      System.out.println("enter specialization:");
+       specialization=sc.next();
+      Officer o=new Officer(name,age,number,address,salary,specialization);
+      System.out.println("officer details are");
+      o.printemployee();
+      o.printsalary();
+      o.printspecialization();
+      System.out.println("enter manager name:");
+       name=sc.next();
+      System.out.println("enter manager age:");
+       age=sc.nextInt();
+      System.out.println("enter manager number:");
+       number=sc.nextLong();
+      System.out.println("enter manager address:");
+       address=sc.next();
+      System.out.println("enter manager salary:");
+       salary=sc.nextFloat();
+      System.out.println("enter department :");
+      department=sc.next();
+      Manager m=new Manager(name,age,number,address,salary,department);
+      System.out.println("manager details are:");
+      m.printemployee();
+      m.printsalary();
+      m.printdepartment();
+	}
+}
